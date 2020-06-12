@@ -105,4 +105,17 @@ $(document).ready(function () {
 
         ]
     });
+    /*Слайдер блока  Гибкой настройки*/
+    $('.setting__slider').slick({
+        arrows:true,
+        appendArrows:$('.button-wrap'),
+    });
+
+
+    $(function () {
+        $('.accordeon__head').click(function () { // Вешаем собыите "клик" на заголово аккордеона
+            $(this).toggleClass('active'); // добавляем класс 'active' тому пункут по которому кликаем. В данном случае, меняем цвет плашки
+            $(this).next().toggleClass('active'); // добавляем класс 'active'. В данном случае, заставляем показать контент пункта по каоторому кликаем.
+        });
+    });
 });
